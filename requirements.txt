@@ -1,0 +1,5 @@
+streamlit==0.88.0  # or the version you're using
+beautifulsoup4==4.10.0
+Wappalyzer==4.2.0
+requests==2.26.0
+jsbeautifier==1.13.8
