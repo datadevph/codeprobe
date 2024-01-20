@@ -116,12 +116,10 @@ def main():
 
         except Exception as e:
             st.error(f"An error occurred: {e}")
-            
+
 def get_code_expander_name(html_code):
     # Function to determine the name of the code expander based on the presence of 'script' or 'style' in HTML code
-    if 'script' in html_code or 'style' in html_code:
-    else:
         return "No Function code"
-        
+
 if __name__ == "__main__":
     main()
