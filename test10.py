@@ -120,6 +120,5 @@ def main():
 def get_code_expander_name(html_code):
     # Function to determine the name of the code expander based on the presence of 'script' or 'style' in HTML code
         
-
 if __name__ == "__main__":
     main()
