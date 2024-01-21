@@ -59,8 +59,6 @@ def main():
 
     # Ask user for URL
     url = st.text_input("Enter website URL:")
-    if url == "Enter website URL:":
-        url = ""
 
     if st.button("Analyze"):
         try:
