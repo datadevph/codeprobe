@@ -55,7 +55,7 @@ def learn_links(technology):
     return learning_links.get(technology, "No learning link available.")
 
 def main():
-    st.title("CodeProbe SEO Analyzer")
+    st.title("CodeProbe: SEO Analyzer")
 
     # Ask user for URL
     url = st.text_input("Enter website URL:")
