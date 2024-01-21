@@ -58,7 +58,7 @@ def main():
     st.title("CodeProbe SEO Analyzer")
 
     # Ask user for URL
-    url = st.text_input("Enter website URL:")
+    url = st.text_input("Enter website URL:", placeholder="Click Analyze button to apply")
 
     if st.button("Analyze"):
         try:
