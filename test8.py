@@ -58,7 +58,7 @@ def main():
     st.title("CodeProbe SEO Analyzer")
 
     # Ask user for URL
-    url = st.text_input("Enter website URL:")
+    url = st.text_input("Enter website URL:", key="url_input", help="Click Analyze button to apply")
 
     if st.button("Analyze"):
         try:
@@ -81,15 +81,15 @@ def main():
                     beautified_js = beautify_js(js)
                     st.code(beautified_js, language='javascript')
 
+            # Learn tab
+            with st.expander("Learn"):
+                st.write("Free Learning Resources:")
+                for tech in ["HTML", "CSS", "JavaScript"]:
+                    learn_link = learn_links(tech)
+                    st.write(f"- Learn {tech}: {learn_link}")
+
         except Exception as e:
             st.error(f"An error occurred: {e}")
-
-    # Learn tab
-    with st.expander("Learn"):
-        st.write("Free Learning Resources:")
-        for tech in ["HTML", "CSS", "JavaScript"]:
-            learn_link = learn_links(tech)
-            st.write(f"- Learn {tech}: {learn_link}")
 
 if __name__ == "__main__":
     main()
