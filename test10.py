@@ -49,6 +49,7 @@ def learn_links(technology):
         "HTML": "https://developer.mozilla.org/en-US/docs/Web/HTML",
         "CSS": "https://developer.mozilla.org/en-US/docs/Web/CSS",
         "JavaScript": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        "Web Development": "https://www.w3schools.com/tutorials/",
         # Add more technologies and corresponding learning links as needed
     }
 
