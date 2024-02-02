@@ -85,7 +85,7 @@ def main():
             # Learn tab
             with st.expander("Learn"):
                 st.write("Free Learning Resources:")
-                for tech in ["HTML", "CSS", "JavaScript"]:
+                for tech in ["HTML", "CSS", "JavaScript", "Web Development"]:
                     learn_link = learn_links(tech)
                     st.write(f"- Learn {tech}: {learn_link}")
 
