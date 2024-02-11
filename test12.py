@@ -93,15 +93,24 @@ def main():
                     beautified_js = beautify_js(js)
                     st.code(beautified_js, language='javascript')
 
+            # Display Python code if available
+            python_code = extract_code_from_tag(soup, 'python', 'python')
+            if python_code:
+                with st.expander("Python Code", expanded=False):
+                    for code, language in python_code:
+                        st.code(code, language=language)
+
             # Display code for other languages
-            with st.expander(get_code_expander_name(soup), expanded=False):
+            # Skip displaying Python code again
+            with st.expander("Other Code", expanded=False):
                 # Extract code from various HTML tags
                 code_snippets = set()
                 code_snippets.update(extract_code_from_tag(soup, 'script', 'javascript'))
                 code_snippets.update(extract_code_from_tag(soup, 'style', 'css'))
 
                 for code, language in code_snippets:
-                    st.code(code, language=language)
+                    if language != 'python':  
+                        st.code(code, language=language)
 
             # Learn tab
             with st.expander("Learn"):
@@ -116,12 +125,6 @@ def main():
 
         except Exception as e:
             st.error(f"An error occurred: {e}")
-
-def get_code_expander_name(soup):
-    if soup.find('script') or soup.find('style'):
-        return "Function code"
-    else:
-        return "No Function code"
 
 if __name__ == "__main__":
     main()
