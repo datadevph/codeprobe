@@ -70,10 +70,10 @@ def main():
             technologies = detect_technologies(url)
 
             # Display in expandable sections
-            with st.expander("HTML Code", expanded=False):
+            with st.expander("HTML Sructure", expanded=False):
                 st.code(html_code[:5000], language='html')  # Truncate to first 5000 characters
 
-            with st.expander("CSS Code", expanded=False):
+            with st.expander("CSS Style", expanded=False):
                 for style in css_code:
                     st.code(style, language='css')
 
